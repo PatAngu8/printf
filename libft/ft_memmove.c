@@ -18,21 +18,27 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const unsigned char	*s;
 	size_t				i;
 
-	s = NULL;
-	s = (const unsigned char *)src;
-	d = NULL;
-	d = (unsigned char *)dst;
+	s = src;
+	d = dst;
 	i = 0;
 	if (dst == NULL && src == NULL)
 		return (dst);
-	while (i < len)
+	if (dst <= src)
 	{
-		d[i] = s[i];
-		i++;
+		while (len--)
+			*d++ = *s++;
+	}
+	if (dst > src)
+	{
+		i = len;
+		while (i > 0)
+		{
+			d[i - 1] = s[i - 1];
+			i--;
+		}
 	}
 	return (dst);
 }
-
 /*int main()
 {
 	char source[] = "patri";
