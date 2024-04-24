@@ -11,34 +11,35 @@
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < dstsize - 1)
+	if (dstsize == 0)
+	{
+		while (src[i] != '\0')
+			i++;
+		return (i);
+	}
+	while (i < dstsize - 1 && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	if (dst[i] > 0)
-	{
+	if (i < dstsize)
 		dst[i] = '\0';
-	}
 	while (src[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 
 /*int main()
 {
 	char dest[5];
-	const char src[] = "patricia";
-	size_t destsize = 5;
+	const char src[] = "";
+	size_t destsize = 2;
 	size_t len;
 	size_t len2;
 	len = ft_strlcpy(dest, src, destsize);
