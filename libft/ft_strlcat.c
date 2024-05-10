@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -35,7 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	char dest[] = "Hello";
 	const char src[] = " world";
-	size_t dstsize = 9;
+	size_t dstsize = 3;
 	size_t result = ft_strlcat(dest, src, dstsize);
 	printf("%zu", result);
 	printf("\n%s", dest);

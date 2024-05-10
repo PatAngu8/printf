@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paangulo <paangulo@estudiante.42.es>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 15:59:27 by paangulo          #+#    #+#             */
-/*   Updated: 2024/04/24 15:59:30 by paangulo         ###   ########.fr       */
+/*   Created: 2024/04/30 11:00:49 by paangulo          #+#    #+#             */
+/*   Updated: 2024/04/30 11:00:51 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+#include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+void    *ft_memchr(const void *s, int c, size_t n)
 {
-    int i;
-
-    i = 0;
+    s = (char *)s;
     c = (char)c;
-    if (c == '\0')
-        return  ((char *)&s[ft_strlen(s)]);
-    while (s[i] != '\0')
-    {
-        if (s[i] == c)
-            return ((char *)&s[i]);       
-        i++;  
-    }
-    return  (NULL);
-}
 
+    while (n > 0)
+    {
+        if (*(unsigned char *)s == (unsigned char)c)
+        {
+            return ((void *)s);		
+        }        
+        s++;
+        n--;
+    }
+    return NULL;
+}
 /*int main()
 {
-    const char *s = "hola mundo";
-    int c = 109;
-    char *ptr = ft_strchr(s, c);
-    char *ptr2 = strchr(s, c);
-    printf ("%s\n", ptr);
-    printf ("%s", ptr2);
+    char s[] = "hola que pasa";
+    int c = 'o';
+    size_t n = strlen(s);
+    char *ptr = ft_memchr(s, c, n);
+    printf("\n%c", *ptr);
 }*/
