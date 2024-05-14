@@ -45,7 +45,7 @@ char    *ft_strdup (const char *s1)
     }
      copy[count_copy] = '\0';
      return (copy);
-     free(copy);
+     
 }
 /*int main()
 {

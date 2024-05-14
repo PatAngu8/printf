@@ -18,60 +18,49 @@
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
     char *subs;
-    size_t count_s;
     size_t count_subs;
     size_t mem;
-    //size_t end_subs;
-    //size_t ini_subs;
     size_t len_s;
     size_t dif;
 
-
-    count_s = 0;
     count_subs = 0;
-    //s[start] = subs[0];
-    //end_subs = len - 1;
-    //ini_subs = (size_t)start;
     len_s = ft_strlen(s);
-    dif = len_s - start;
+    dif = len_s - start;  
 
-    
-
-    if (s == NULL)
-        return (NULL);
-
-    if (start >= len_s)
-        return (NULL);
-
-    if (dif < len)
-        //len = ini_subs + dif;
-        len = len_s - start;
+    if (dif < len)        
+        len = dif;
 
     mem = (len + 1) * sizeof(char);
+
+    if (s == NULL)
+        return (NULL); 
+
+    if (start >= len_s)
+        return (ft_strdup(""));
+
     subs = malloc(mem);
 
     if (subs == NULL)
-        return (NULL);
+        return (NULL);    
 
-    
-
-    while (count_s < len)  
+    while (count_subs < len)  
     {
         subs[count_subs] = s[start + count_subs];
         count_subs++;         
     }
     
     subs[len] = '\0';
+    
     return (subs);
-    free(subs);
+    free(subs); 
 }
 
-int main()
+/*int main()
 {
-    char const *s = "patricia";
-    unsigned int start = 3;
-    size_t len = 4;
+    char const *s = "all of this !";
+    unsigned int start = 0;
+    size_t len = 13;
 
     char *subs = ft_substr(s, start, len);
     printf("%s", subs);
-}
+}*/
