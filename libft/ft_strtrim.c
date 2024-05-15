@@ -19,17 +19,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	count_s1;
 	size_t	len_s1;
-    size_t count_new_s;
+	size_t	count_new_s;
 	char	*new_s;
 
-    count_s1 = 0;
-    count_new_s = 0;
-    len_s1 = ft_strlen(s1);
+	count_s1 = 0;
+	count_new_s = 0;
+	len_s1 = ft_strlen(s1);
 	new_s = 0;
-
-         
 	if (s1 != 0 && set != 0)
-	{		
+	{
 		while (s1[count_s1] && ft_strchr(set, s1[count_s1]))
 			count_s1++;
 		while (s1[len_s1 - 1] && ft_strchr(set, s1[len_s1 - 1]) && len_s1 > count_s1)
@@ -49,7 +47,7 @@ char	*ft_strtrim(char const *s1, char const *set)
                 return (new_s);
             }
     }  
-	return (0);       
+	return (0);
 }
 
 
