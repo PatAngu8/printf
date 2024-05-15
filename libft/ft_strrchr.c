@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
 char    *ft_strrchr(const char *s, int c)
 {
@@ -28,12 +30,13 @@ char    *ft_strrchr(const char *s, int c)
     }
     return (NULL);
 }
-/* int main()
+ int main()
 {
-    const char *s = "abbbbbbbb";
-    int c = 'a';
+    const char *s = "ca";
+    int c = 'c';
     char *ptr = ft_strrchr(s, c);
     char *ptr2 = strrchr(s, c);
     printf ("%s\n", ptr);
     printf ("%s", ptr2);
- }*/
+    //set, s1[count_s1]
+ }
