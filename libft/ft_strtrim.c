@@ -18,38 +18,21 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	count_s1;
-	size_t	len_s1;
-	size_t	count_new_s;
-	char	*new_s;
+	size_t	l;
+     
 
-	count_s1 = 0;
-	count_new_s = 0;
-	len_s1 = ft_strlen(s1);
-	new_s = 0;
-	if (s1 != 0 && set != 0)
-	{
+    if((!s1) || (!set))
+        return (NULL);
+    
+    count_s1 = 0;
+    l = ft_strlen(s1) - 1;
+	
 		while (s1[count_s1] && ft_strchr(set, s1[count_s1]))
 			count_s1++;
-		while (s1[len_s1 - 1] && ft_strchr(set, s1[len_s1 - 1]) && len_s1 > count_s1)
-			len_s1--;
-		new_s = (char *)malloc(sizeof(char) * (len_s1 - count_s1 + 1));
-		if (new_s != NULL)
-			{
-                //ft_strlcpy(new_s, &s1[count_s1], len_s1 - count_s1 + 1);
-                //ft_substr(s1, s1[count_s1], ft_strlen(new_s));
-                while (count_s1 < len_s1)
-                    {
-                        new_s[count_new_s] = s1[count_s1];
-                        count_new_s++;
-                        count_s1++;
-                    }                    
-                new_s[count_new_s] = '\0';
-                return (new_s);
-            }
-    }  
-	return (0);
+		while (s1[l] && ft_strchr(set, s1[l]) && l > count_s1)
+			l--;               
+        return (ft_substr(s1, count_s1, l - count_s1 + 1));            
 }
-
 
 /*int main()
 {
