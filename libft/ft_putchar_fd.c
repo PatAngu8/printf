@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paangulo <paangulo@estudiante.42.es>       +#+  +:+       +#+        */
+/*   By: patri <patriciaangulo.g@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 15:29:05 by paangulo          #+#    #+#             */
-/*   Updated: 2024/05/15 15:29:07 by paangulo         ###   ########.fr       */
+/*   Created: 2024/05/16 13:12:46 by patri             #+#    #+#             */
+/*   Updated: 2024/05/16 13:12:49 by patri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar_fd(char c, int fd)
+void ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+    write(fd, &c, 1);
 }

@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: paangulo <paangulo@estudiante.42.es>       +#+  +:+       +#+        */
+/*   By: patri <patriciaangulo.g@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 17:06:29 by paangulo          #+#    #+#             */
-/*   Updated: 2024/05/15 17:06:31 by paangulo         ###   ########.fr       */
+/*   Created: 2024/05/16 13:23:17 by patri             #+#    #+#             */
+/*   Updated: 2024/05/16 13:23:20 by patri            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+void ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
-	{
-		write(fd, s, 1);
-		s++;
-	}
+    size_t len = 0;
+    while (s[len] != '\0') 
+        len++;
+    write(fd, s, len);
 }
