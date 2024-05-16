@@ -14,23 +14,24 @@
 #include <string.h>
 #include <stdio.h>
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr (const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = ft_strlen(s);
-    c = (char)c;
-    if (c == '\0')
-        return  ((char *)&s[i]);
-    while (i >= 0)
-    {
-        if (s[i] == c)
-            return ((char *)&s[i]);    
-        i--;
-    }
-    return (NULL);
+	i = ft_strlen(s);
+	c = (char)c;
+
+	if (c == '\0')
+		return ((char *)&s[i]);
+	while (i >= 0)
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i--;
+	}
+	return (NULL);
 }
- int main()
+ /*int main()
 {
     const char *s = "ca";
     int c = 'c';
@@ -39,4 +40,4 @@ char    *ft_strrchr(const char *s, int c)
     printf ("%s\n", ptr);
     printf ("%s", ptr2);
     //set, s1[count_s1]
- }
+ }*/
