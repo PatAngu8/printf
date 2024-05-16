@@ -14,24 +14,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
-void *ft_calloc(size_t count, size_t size)
+
+void	*ft_calloc(size_t count, size_t size)
 {
-    size_t  mem;
-    void    *ptr;
-    /*if (count == 0 || size == 0)
-    {
-        count = 1;
-        size = 1;
-    }*/
-    mem = count * size;
-    ptr = malloc(mem);
-    if (ptr == (void *)0)
-        return ((void *)0);
-    else
-        ft_bzero(ptr, mem);
-    return (ptr);
-    free(ptr);
+	size_t	mem;
+	void	*ptr;
+
+	mem = count * size;
+	ptr = malloc(mem);
+	if (ptr == (void *)0)
+		return ((void *)0);
+	else
+		ft_bzero(ptr, mem);
+	return (ptr);
+	free(ptr);
 }
+
 /*int main()
 {
     size_t count = 0;

@@ -15,26 +15,22 @@
 #include <stdlib.h>
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *subs;
-    size_t count_subs;
-    size_t mem;
-    size_t len_s;
-    size_t dif;
+	char	*subs;
+	size_t	count_subs;
+	size_t	mem;
+	size_t	len_s;
+	size_t	dif;
 
-    count_subs = 0;
-    len_s = ft_strlen(s);
-    dif = len_s - start;  
-
-    if (dif < len)        
-        len = dif;
-
-    mem = (len + 1) * sizeof(char);
-
-    if (s == NULL)
-        return (NULL); 
-
+	count_subs = 0;
+	len_s = ft_strlen(s);
+	dif = len_s - start;
+	if (dif < len)    
+		len = dif;
+	mem = (len + 1) * sizeof(char);
+	if (s == NULL)
+		return (NULL);
     if (start >= len_s)
         return (ft_strdup(""));
 
