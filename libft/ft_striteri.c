@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: patri <patriciaangulo.g@gmail.com>         +#+  +:+       +#+        */
+/*   By: paangulo <paangulo@estudiante.42.es>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 13:40:13 by patri             #+#    #+#             */
-/*   Updated: 2024/05/16 13:40:17 by patri            ###   ########.fr       */
+/*   Created: 2024/05/17 17:10:09 by paangulo          #+#    #+#             */
+/*   Updated: 2024/05/17 17:10:11 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putendl_fd(char *s, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	len;
+	int	i;
 
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	write(fd, s, len);
-	write(fd, "\n", 1);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

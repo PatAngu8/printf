@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: patri <patriciaangulo.g@gmail.com>         +#+  +:+       +#+        */
+/*   By: paangulo <paangulo@estudiante.42.es>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 13:40:13 by patri             #+#    #+#             */
-/*   Updated: 2024/05/16 13:40:17 by patri            ###   ########.fr       */
+/*   Created: 2024/05/17 14:05:13 by paangulo          #+#    #+#             */
+/*   Updated: 2024/05/17 14:05:15 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+char	*ft_itoa(int n)
 {
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	write(fd, s, len);
-	write(fd, "\n", 1);
+	int	mod;
+	while (n / 10 > 1)
+	{
+		mod = n % 10;
+	}
+	
 }
