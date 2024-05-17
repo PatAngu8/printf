@@ -17,19 +17,18 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	count_s1;
-	size_t	l;
+	size_t	i;
 
-	if ((!s1) || (!set))
+	if (!s1 || !set)
 		return (NULL);
-	count_s1 = 0;
-	l = ft_strlen(s1) - 1;
-	while (s1[count_s1] && ft_strchr(set, s1[count_s1]))
-		count_s1++;
-	while (s1[l] && ft_strchr(set, s1[l]) && l > count_s1)
-		l--;
-	return (ft_substr(s1, count_s1, l - count_s1 + 1));
+	while (ft_strchr(set, *s1) && *s1 != '\0')
+		s1++;
+	i = ft_strlen((char *)s1);
+	while (ft_strchr(set, s1[i]) && i != 0)
+		i--;
+	return (ft_substr((char *)s1, 0, i + 1));
 }
+
 
 /*int main()
 {
