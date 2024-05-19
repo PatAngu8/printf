@@ -14,6 +14,9 @@
 # define LIBFT_H
 
 # include <stddef.h>
+//# include <stdio.h>
+# include <stdlib.h>
+//# include <string.h>
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -49,5 +52,10 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char const *s, char c);
-
-# endif
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+t_list	*ft_lstnew(void *content);
+#endif

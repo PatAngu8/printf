@@ -15,22 +15,22 @@
 #include <string.h>
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)	
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	s = (char *)s;
 	c = (char)c;
-
 	while (n > 0)
 	{
 		if (*(unsigned char *)s == (unsigned char)c)
 		{
-			return ((void *)s);		
-		}        
+			return ((void *)s);
+		}
 		s++;
 		n--;
 	}
 	return (NULL);
 }
+
 /*int main()
 {
     char s[] = "hola que pasa";

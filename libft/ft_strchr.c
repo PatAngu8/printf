@@ -29,7 +29,6 @@ char	*ft_strchr(const char *s, int c)
 	return ((void *)0);
 }
 
-
 /*int main()
 {
     const char *s = "hola mundo";
