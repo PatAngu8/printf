@@ -13,22 +13,20 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-typedef struct s_list 
+typedef struct s_list
 {
-    void *content;
-    struct s_list *next;
-} t_list;
-
+	void *content;
+	struct s_list *next;
+}	t_list;
 t_list *ft_lstnew(void *content)
 {
 	t_list *new_nodo = (t_list *)malloc(sizeof(t_list));
 
 	if (!new_nodo)
-		return (NULL);
-	
+		return (NULL);	
 	new_nodo->content = content;
 	new_nodo->next = NULL;
-	return new_nodo;
+	return (new_nodo); 
 }
 
 /*int main()
