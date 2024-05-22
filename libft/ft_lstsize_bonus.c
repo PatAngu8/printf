@@ -10,26 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-typedef struct	s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {
-	int			i;
 	t_list	*ptr;
+	int		count;
 
-	i = 0;
+	count = 0;
 	ptr = lst;
 	while (ptr != NULL)
 	{
-		i++;
+		count++;
 		ptr = ptr->next;
 	}
-	return (i);
+	return (count);
 }
