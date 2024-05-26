@@ -6,13 +6,11 @@
 /*   By: paangulo <paangulo@estudiante.42.es>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 16:54:56 by paangulo          #+#    #+#             */
-/*   Updated: 2024/05/02 16:54:58 by paangulo         ###   ########.fr       */
+/*   Updated: 2024/05/23 19:17:26 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_atoi(const char *str)
 {
