@@ -36,13 +36,4 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * result);
 }
-/*int main()
-{
-    char str[] = "12,3";
-    int result;
-    int result2;
-    result = ft_atoi(str);
-    result2 = atoi(str);
-    printf("%d", result);
-    printf("\n%d", result2);
-}*/
+

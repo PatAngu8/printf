@@ -39,11 +39,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*int main()
-{
-	char source[] = "patri";
-	char destiny[] = "aeiou";
-	ft_memmove (destiny, source, 2);
-   	printf ("%s", destiny);
-	return 0;
-}*/

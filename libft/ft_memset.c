@@ -27,12 +27,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-/*int main()
-{
-	char str[] = "patri";
-	str[5] = '\0';	
-	ft_memset (str, 88, 7); //el 88 es el caracter X de ascii, imprime XXXXX
-	printf ("%s", str);
-	return 0;
-}*/

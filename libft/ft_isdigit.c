@@ -17,11 +17,3 @@ int	ft_isdigit(int c)
 	return (c >= 48 && c <= 57);
 }
 
-/*int main()
-{
-	int c = 49;
-	int x;
-	x = ft_isdigit (c);
-	printf ("%d", x);
-	return 0;	
-}*/

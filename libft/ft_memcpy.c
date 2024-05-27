@@ -32,15 +32,3 @@ void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 	}
 	return (dest);
 }
-
-/*int main()
-{
-	char source[] = "patri";
-	char destiny[] = "aeiou";
-	ft_memcpy(destiny, source, 3);
-   	printf("%s", destiny);
-
-//	memcpy(destiny, source, 3);
-//	printf("\n%s", destiny);
-	return 0;
-}	*/

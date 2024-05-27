@@ -39,12 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_s[count_new_s + count_s2] = '\0';
 	return (new_s);
 }
-
-/*int main()
-{
-    char const *s1 = "where is my ";
-    char const *s2 = "malloc ???";
-    char *new;
-    new = ft_strjoin(s1, s2);
-    printf("\nY en el main es: %s", new);
-}*/

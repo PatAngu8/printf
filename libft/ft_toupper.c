@@ -20,10 +20,4 @@ int	ft_toupper(int c)
 		return (c);
 }
 
-/*int main()
-{
-    int c = 100;
-    int r;
-    r = ft_toupper(c);
-    printf("%d", r);
-}*/
+

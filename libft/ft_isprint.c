@@ -16,12 +16,3 @@ int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
-
-/*int main()
-{
-	int c = 33;
-	int x;
-	x = ft_isprint (c);
-	printf ("%d", x);
-	return 0;	
-}*/

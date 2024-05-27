@@ -26,21 +26,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*int main() {
-    char str1[] = "\xff\xaa\xde\x12";
-    char str2[] = "\xff\xaa\xde\x12MACOSAAAAA";
-    int resultado1 = memcmp(str1, str2, 4);
-	int resultado11 = ft_memcmp(str1, str2, 4);
-    if (resultado1 == 0) {
-        printf("1: str1 y str2 son iguales.\n");
-    } else {
-        printf("1: str1 y str2 son diferentes.\n");
-    }
-	if (resultado11 == 0) {
-        printf("11: str1 y str2 son iguales.\n");
-    } else {
-        printf("11: str1 y str2 son diferentes.\n");
-    }
-    return 0;
-}*/

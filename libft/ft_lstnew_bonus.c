@@ -23,18 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_nodo->next = NULL;
 	return (new_nodo);
 }
-/*int main()
-{
-	int valor = 42; //crear contenido para el nuevo nodo
-	t_list *nodo = ft_lstnew(&valor); //creamos el nuevo nodo
-
-	if (nodo)
-	{
-		printf("Nodo creado con éxito!\n");
-        	printf("Contenido del nodo: %d\n", *(int *)nodo->content);
-    	} else {
-        	printf("Error al crear el nodo.\n");
-	}
-	free(nodo); //liberar memoria del nodo
-	return 0;
-}*/

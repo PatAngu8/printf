@@ -28,13 +28,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((void *)0);
 }
-
-/*int main()
-{
-    const char *s = "hola mundo";
-    int c = 109;
-    char *ptr = ft_strchr(s, c);
-    char *ptr2 = strchr(s, c);
-    printf ("%s\n", ptr);
-    printf ("%s", ptr2);
-}*/

@@ -38,10 +38,3 @@ char	*ft_strdup(const char *s1)
 	copy[count_copy] = '\0';
 	return (copy);
 }
-
-/*int main()
-{
-    const char *s1 = "que pasa pepe";
-    char *copy = ft_strdup (s1);
-    printf("%s", copy);
-}*/

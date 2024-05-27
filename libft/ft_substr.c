@@ -40,12 +40,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (subs);
 }
 
-/*int main()
-{
-    char const *s = "all of this !";
-    unsigned int start = 0;
-    size_t len = 13;
 
-    char *subs = ft_substr(s, start, len);
-    printf("%s", subs);
-}*/

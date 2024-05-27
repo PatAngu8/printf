@@ -30,14 +30,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
-
-/*int main()
-{
-	char dest[] = "Hello";
-	const char src[] = " world";
-	size_t dstsize = 3;
-	size_t result = ft_strlcat(dest, src, dstsize);
-	printf("%zu", result);
-	printf("\n%s", dest);
-	return 0;
-}*/

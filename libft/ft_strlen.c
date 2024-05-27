@@ -27,11 +27,3 @@ size_t	ft_strlen(const char *s)
 	return (total);
 }
 
-/*int main()
-{
-	char *s = "holaaaa";
-	size_t total;
-	total = ft_strlen (s);
-	printf("%zu", total);
-	return 0;
-}	*/

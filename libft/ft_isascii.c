@@ -22,12 +22,3 @@ int	ft_isascii(int c)
 		ret = 0;
 	return (ret);
 }
-
-/*int main()
-{
-	int c = ñ;	
-	int x;
-	x = ft_isascii(c);
-	printf ("%d", x);
-	return 0;
-}*/

@@ -26,10 +26,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr((char *)s1, 0, i + 1));
 }
 
-/*int main()
-{
-    char const *s1 = "cadaena";
-    char const *set = "ca";
-    char *new_s = ft_strtrim(s1, set);
-    printf("%s", new_s);
-}*/

@@ -27,11 +27,3 @@ void	*ft_calloc(size_t count, size_t size)
 	free(ptr);
 }
 
-/*int main()
-{
-    size_t count = 0;
-    size_t size = sizeof(int);
-    int *ptr = ft_calloc(count, size);
-    printf(“%d”,*ptr);
-    free(ptr);
-}*/

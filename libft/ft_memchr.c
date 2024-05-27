@@ -28,11 +28,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-/*int main()
-{
-    char s[] = "hola que pasa";
-    int c = 'o';
-    size_t n = strlen(s);
-    char *ptr = ft_memchr(s, c, n);
-    printf("\n%c", *ptr);
-}*/
