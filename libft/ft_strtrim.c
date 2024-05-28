@@ -25,4 +25,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	return (ft_substr((char *)s1, 0, i + 1));
 }
-

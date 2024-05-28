@@ -39,5 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	subs[len] = '\0';
 	return (subs);
 }
-
-
