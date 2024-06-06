@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: paangulo <paangulo@student.42.fr>          +#+  +:+       +#+         #
+#    By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 16:30:03 by paangulo          #+#    #+#              #
-#    Updated: 2024/06/04 16:30:40 by paangulo         ###   ########.fr        #
+#    Updated: 2024/06/06 16:45:14 by paangulo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,13 @@ CC = clang
 CFLAGS = -Wall -Werror -Wextra
 
 # Sources
-SRC = ft_printf.c
-SRC_BONUS = 
+SRC = ft_printf.c\
+ft_fundef.c\
+ft_fundefmore.c\
 
 # Objects generated during compilation
 OBJS = $(SRC:.c=.o)
-OBJS_BONUS = $(SRC_BONUS:.c=.o)
+#OBJS_BONUS = $(SRC_BONUS:.c=.o)
 
 # Default rule for compiling the library
 all: $(NAME)
@@ -36,12 +37,12 @@ $(NAME):$(OBJS)
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+#bonus: $(OBJS_BONUS)
+#	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 # Rule to remove generated objects
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	rm -f $(OBJS)
 
 # Rule to remove the library
 fclean: clean
@@ -50,4 +51,4 @@ fclean: clean
 # Rule to rebuild the project from scratch
 re: fclean all
 
-.PHONY: clean fclean all re bonus
+.PHONY: clean fclean all re

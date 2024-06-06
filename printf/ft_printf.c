@@ -6,29 +6,47 @@
 /*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 19:21:02 by paangulo          #+#    #+#             */
-/*   Updated: 2024/06/04 16:53:04 by paangulo         ###   ########.fr       */
+/*   Updated: 2024/06/06 16:49:02 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdarg.h>
 
-void	check_type(char a)
+void	check_type(va_list args, char type)
 {
-	if ((a == 'c') || (a == '%'))
+	char			a;
+	/*char			*str;
+	int				num;
+	unsigned int	num2;*/
+
+	if (type == 'c')
+	{
+		a = (char) va_arg(args, int);
 		ft_putchar(a);
-	else if (a == 's')
-		ft_putstr(a);
-	else if ((a == 'd') || (a == 'i'))
-		ft_putnbr(a);
-	else if (a == 'u')
-		ft_putnbr_unsigned(a);
-	else if (a == 'p')
+	}
+	/*else if (type == 's')
+	{
+		str = (char) va_arg(args, int);
+		ft_putstr(str);
+	}
+	else if ((type == 'd') || (type == 'i'))
+	{
+		num = (char) va_arg(args, int);
+		ft_putnbr(num);
+	}
+	else if (type == 'u')
+	{
+		num2 = (char) va_arg(args, int);
+		ft_putnbr_unsigned(num2);
+	}
+	else if (type == 'p')
 		ft_putptr(a);
-	else if (a == 'x')
+	else if (type == 'x')
 		ft_put_hex_upper(a);
-	else if (a == "X")
-		ft_put_hex_lower(a);		
+	else if (type == "X")
+		ft_put_hex_lower(a);*/
 }
+
 int	ft_printf(char const *format, ...)
 {
 	va_list	args;
@@ -41,7 +59,7 @@ int	ft_printf(char const *format, ...)
 		if (*format == '%' && *(format + 1))
 		{
 			format++;
-			check_type(*format);
+			check_type(args, *format);
 		}		
 	}	
 }

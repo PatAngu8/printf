@@ -6,7 +6,7 @@
 /*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 16:38:06 by paangulo          #+#    #+#             */
-/*   Updated: 2024/06/04 17:30:34 by paangulo         ###   ########.fr       */
+/*   Updated: 2024/06/06 16:35:42 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putchar(char a)
 }
 
 //-----------------------------------------------
-void	ft_putstr(char *str)
+/*void	ft_putstr(char *str)
 {
 	while (*str)
 	{
@@ -64,16 +64,6 @@ void	ft_putnbr_unsigned(int n)
 void	ft_putptr(char a)
 {
     
-}
+}*/
 
 //-----------------------------------------------
-void	ft_put_hex_upper(char a)
-{
-    
-}
-
-//------------------------------------------------
-void	ft_put_hex_lower(char a)
-{
-    
-}
