@@ -19,8 +19,8 @@ CFLAGS = -Wall -Werror -Wextra
 
 # Sources
 SRC = ft_printf.c\
-ft_fundef.c\
-ft_fundefmore.c\
+
+FUNDEF_SRC = ft_fundef.c
 
 # Objects generated during compilation
 OBJS = $(SRC:.c=.o)

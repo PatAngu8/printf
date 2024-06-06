@@ -11,13 +11,15 @@
 /* ************************************************************************** */
 
 #include <stdarg.h>
+#include <stdio.h>
+#include "ft_fundef.h"
 
 void	check_type(va_list args, char type)
 {
 	char			a;
-	/*char			*str;
+	//char			str;
 	int				num;
-	unsigned int	num2;*/
+	//unsigned int	num2;
 
 	if (type == 'c')
 	{
@@ -26,15 +28,15 @@ void	check_type(va_list args, char type)
 	}
 	/*else if (type == 's')
 	{
-		str = (char) va_arg(args, int);
-		ft_putstr(str);
-	}
+		str = (char) va_arg(args, char *);
+		ft_putstr(&str);
+	}*/
 	else if ((type == 'd') || (type == 'i'))
 	{
 		num = (char) va_arg(args, int);
 		ft_putnbr(num);
 	}
-	else if (type == 'u')
+	/*else if (type == 'u')
 	{
 		num2 = (char) va_arg(args, int);
 		ft_putnbr_unsigned(num2);
@@ -60,6 +62,15 @@ int	ft_printf(char const *format, ...)
 		{
 			format++;
 			check_type(args, *format);
-		}		
+		}
+		format++;
 	}	
+	return	(0);
+}
+
+int main()
+{
+	int num;
+	num = 8;
+	ft_printf("hola %i", num);
 }

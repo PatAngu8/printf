@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "ft_fundef.h"
 
 void	ft_putchar(char a)
 {
@@ -20,12 +21,15 @@ void	ft_putchar(char a)
 //-----------------------------------------------
 /*void	ft_putstr(char *str)
 {
-	while (*str)
+	int	i;
+
+	i = 0;
+	while (str[i])
 	{
-		write(1, str, 1);
-		str++;
+		ft_putchar(str[i]);
+		i++;
 	}
-}
+}*/
 
 //-----------------------------------------------
 void	ft_putnbr(int n)
@@ -51,7 +55,7 @@ void	ft_putnbr(int n)
 }
 
 //-----------------------------------------------
-void	ft_putnbr_unsigned(int n)
+/*void	ft_putnbr_unsigned(int n)
 {
 	if (n >= 10)
 	{
