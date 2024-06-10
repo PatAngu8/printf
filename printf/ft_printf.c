@@ -12,41 +12,29 @@
 
 #include <stdarg.h>
 #include <stdio.h>
-#include "ft_fundef.h"
+#include "libftprintf.h"
 
-void	check_type(va_list args, char type)
+void	ft_check_type(va_list args, char type)
 {
-	char			a;
-	//char			str;
-	int				num;
-	//unsigned int	num2;
+	unsigned int	num2;
 
 	if (type == 'c')
-	{
-		a = (char) va_arg(args, int);
-		ft_putchar(a);
-	}
-	/*else if (type == 's')
-	{
-		str = (char) va_arg(args, char *);
-		ft_putstr(&str);
-	}*/
+		ft_putchar((char) va_arg(args, int));
+	else if (type == 's')
+		ft_putstr(va_arg(args, char *));
 	else if ((type == 'd') || (type == 'i'))
+		ft_putnbr(va_arg(args, int));
+	else if (type == 'u')
+		ft_putnbr_unsigned((char) va_arg(args, int));
+	else if ((type == 'x') || (type == 'X'))
 	{
-		num = (char) va_arg(args, int);
-		ft_putnbr(num);
+		if (type == 'x')
+			ft_puthex(va_arg(*args, unsigned int), 'x');
+		if (type == 'X')
+			ft_puthex(va_arg(*args, unsigned int), 'X');
 	}
-	/*else if (type == 'u')
-	{
-		num2 = (char) va_arg(args, int);
-		ft_putnbr_unsigned(num2);
-	}
-	else if (type == 'p')
-		ft_putptr(a);
-	else if (type == 'x')
-		ft_put_hex_upper(a);
-	else if (type == "X")
-		ft_put_hex_lower(a);*/
+	/*else if (type == 'p')
+	ft_putptr(a);*/
 }
 
 int	ft_printf(char const *format, ...)
@@ -58,19 +46,22 @@ int	ft_printf(char const *format, ...)
 	va_copy(args_copy, args);
 	while (*format)
 	{
+		if (*format != '%')
+			ft_putchar(*format);
 		if (*format == '%' && *(format + 1))
 		{
 			format++;
-			check_type(args, *format);
+			ft_check_type(args, *format);
 		}
 		format++;
-	}	
-	return	(0);
+	}
+	va_end (args);
+	return (0);
 }
-
 int main()
 {
-	int num;
-	num = 8;
-	ft_printf("hola %i", num);
+	unsigned int	num;
+
+	num = 12; 
+	ft_printf("hola\n %u", num);
 }

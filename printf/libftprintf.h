@@ -19,12 +19,10 @@
 # include <stdio.h>
 
 int		ft_printf(char const *format, ...);
-
-/*void	ft_putstr(char *s);
+void	ft_putchar(char c);
+void	ft_putstr(char *s);
 void	ft_putnbr(int n);
-void	ft_putptr(char c);
-void	ft_putnbr_unsigned(int n);
-void	ft_put_hex_upper(char c);
-void	ft_put_hex_lower(char c);*/
-
+void	ft_putnbr_unsigned(unsigned int n);
+//void	ft_puthex(unsigned int n, char c);
+//void	ft_putptr(char c);
 #endif

@@ -19,8 +19,11 @@ CFLAGS = -Wall -Werror -Wextra
 
 # Sources
 SRC = ft_printf.c\
-
-FUNDEF_SRC = ft_fundef.c
+ft_putchar.c\
+ft_putstr.c\
+ft_putnbr.c\
+ft_putnbr_unsigned.c\
+ft_puthex.c\
 
 # Objects generated during compilation
 OBJS = $(SRC:.c=.o)
