@@ -1,12 +1,19 @@
-//poner cabecera
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 13:35:59 by paangulo          #+#    #+#             */
+/*   Updated: 2024/06/11 13:51:41 by paangulo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libftprintf.h"
 
 void	ft_puthex(unsigned long long n, char c)
 {
-	//unsigned long long	count;
-
-	//count = 0;
 	if (n >= 16)
 	{
 		ft_puthex (n / 16, c);

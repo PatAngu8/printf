@@ -6,7 +6,7 @@
 #    By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 16:30:03 by paangulo          #+#    #+#              #
-#    Updated: 2024/06/06 16:45:14 by paangulo         ###   ########.fr        #
+#    Updated: 2024/06/13 12:13:54 by paangulo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ ft_puthex.c\
 
 # Objects generated during compilation
 OBJS = $(SRC:.c=.o)
-#OBJS_BONUS = $(SRC_BONUS:.c=.o)
 
 # Default rule for compiling the library
 all: $(NAME)
@@ -39,9 +38,6 @@ $(NAME):$(OBJS)
 # Rule to compile each source file into an object 
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
-
-#bonus: $(OBJS_BONUS)
-#	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 # Rule to remove generated objects
 clean:

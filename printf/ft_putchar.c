@@ -1,8 +1,18 @@
-//poner cabecera
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/11 13:35:39 by paangulo          #+#    #+#             */
+/*   Updated: 2024/06/13 11:48:08 by paangulo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putchar(char a)
+int	ft_putchar(char a)
 {
-	write (1, &a, 1);
+	return (write (1, &a, 1));
 }

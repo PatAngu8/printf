@@ -6,7 +6,7 @@
 /*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 19:21:02 by paangulo          #+#    #+#             */
-/*   Updated: 2024/06/06 16:49:02 by paangulo         ###   ########.fr       */
+/*   Updated: 2024/06/13 11:05:29 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 
 void	ft_check_type(va_list args, char type)
 {
-	unsigned int	num2;
-
 	if (type == 'c')
 		ft_putchar((char) va_arg(args, int));
 	else if (type == 's')
@@ -25,17 +23,14 @@ void	ft_check_type(va_list args, char type)
 	else if ((type == 'd') || (type == 'i'))
 		ft_putnbr(va_arg(args, int));
 	else if (type == 'u')
-		ft_putnbr_unsigned((char) va_arg(args, int));
-	else if ((type == 'x') || (type == 'X'))
-	{
-		if (type == 'x')
-			ft_puthex(va_arg(*args, unsigned int), 'x');
-		if (type == 'X')
-			ft_puthex(va_arg(*args, unsigned int), 'X');
-	}
+		ft_putnbr_unsigned((char) va_arg(args, unsigned int));
+	else if (type == 'x')
+		ft_puthex(va_arg(args, unsigned int), 'x');
+	else if (type == 'X')
+		ft_puthex(va_arg(args, unsigned int), 'X');
+}
 	/*else if (type == 'p')
 	ft_putptr(a);*/
-}
 
 int	ft_printf(char const *format, ...)
 {
@@ -62,6 +57,6 @@ int main()
 {
 	unsigned int	num;
 
-	num = 12; 
-	ft_printf("hola\n %u", num);
+	num = 16; 
+	ft_printf("hola\n %x", num);
 }
