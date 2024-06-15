@@ -12,15 +12,15 @@
 
 #include "libftprintf.h"
 
+int	ft_strlen(const char *str);
+
 int	ft_putstr(char *str)
 {
 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-	return (i);
+	ft_strlen(*str);
+	if (!str)
+		str = NULL;
+	i = ft_strlen(str);
+	return (write(1, str, i));
 }
