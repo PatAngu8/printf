@@ -1,6 +1,16 @@
-//poner cabecera
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/16 21:44:35 by paangulo          #+#    #+#             */
+/*   Updated: 2024/06/16 22:23:09 by paangulo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

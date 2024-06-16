@@ -6,7 +6,7 @@
 #    By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/04 16:30:03 by paangulo          #+#    #+#              #
-#    Updated: 2024/06/13 12:13:54 by paangulo         ###   ########.fr        #
+#    Updated: 2024/06/16 21:32:26 by paangulo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,8 @@ ft_putstr.c\
 ft_putnbr.c\
 ft_putnbr_unsigned.c\
 ft_puthex.c\
+ft_putptr.c\
+ft_strlen.c\
 
 # Objects generated during compilation
 OBJS = $(SRC:.c=.o)

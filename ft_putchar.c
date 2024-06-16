@@ -6,13 +6,13 @@
 /*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:35:39 by paangulo          #+#    #+#             */
-/*   Updated: 2024/06/13 11:48:08 by paangulo         ###   ########.fr       */
+/*   Updated: 2024/06/16 22:11:53 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_putchar(char a)
+int	ft_putchar(int a)
 {
 	return (write (1, &a, 1));
 }

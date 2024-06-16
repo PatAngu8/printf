@@ -6,57 +6,58 @@
 /*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 19:21:02 by paangulo          #+#    #+#             */
-/*   Updated: 2024/06/13 11:05:29 by paangulo         ###   ########.fr       */
+/*   Updated: 2024/06/16 22:44:08 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
-#include <stdio.h>
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-void	ft_check_type(va_list args, char type)
+static int	ft_check_type(va_list args, char type)
 {
 	if (type == 'c')
-		ft_putchar((char) va_arg(args, int));
+		return (ft_putchar(va_arg(args, int)));
 	else if (type == 's')
-		ft_putstr(va_arg(args, char *));
+		return (ft_putstr(va_arg(args, char *)));
 	else if ((type == 'd') || (type == 'i'))
-		ft_putnbr(va_arg(args, int));
+		return ((ft_putnbr(va_arg(args, int))));
 	else if (type == 'u')
-		ft_putnbr_unsigned((char) va_arg(args, unsigned int));
+		return (ft_putnbr_unsigned(va_arg(args, unsigned int)));
 	else if (type == 'x')
-		ft_puthex(va_arg(args, unsigned int), 'x');
+		return (ft_puthex(va_arg(args, unsigned int), 'x'));
 	else if (type == 'X')
-		ft_puthex(va_arg(args, unsigned int), 'X');
+		return (ft_puthex(va_arg(args, unsigned int), 'X'));
+	else if (type == 'p')
+		return (ft_putptr(va_arg(args, uintptr_t)));
+	else if (type == '%')
+		return (ft_putchar('%'));
+	return (1);
 }
-	/*else if (type == 'p')
-	ft_putptr(a);*/
 
 int	ft_printf(char const *format, ...)
 {
 	va_list	args;
-	va_list	args_copy;
+	int		len;
 
 	va_start(args, format);
-	va_copy(args_copy, args);
+	len = 0;
 	while (*format)
 	{
 		if (*format != '%')
-			ft_putchar(*format);
+			len += ft_putchar(*format);
 		if (*format == '%' && *(format + 1))
 		{
+			len += ft_check_type(args, *format);
 			format++;
-			ft_check_type(args, *format);
 		}
 		format++;
 	}
 	va_end (args);
-	return (0);
+	return (len);
 }
-int main()
+/*int main()
 {
 	unsigned int	num;
 
 	num = 16; 
 	ft_printf("hola\n %x", num);
-}
+}*/

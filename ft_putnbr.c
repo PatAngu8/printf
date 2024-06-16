@@ -6,11 +6,11 @@
 /*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:36:23 by paangulo          #+#    #+#             */
-/*   Updated: 2024/06/13 13:32:42 by paangulo         ###   ########.fr       */
+/*   Updated: 2024/06/16 22:06:27 by paangulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int n)
 {
