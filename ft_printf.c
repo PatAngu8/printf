@@ -1,4 +1,14 @@
-//poner cabecera
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: paangulo <paangulo@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/20 16:21:05 by paangulo          #+#    #+#             */
+/*   Updated: 2024/06/20 17:17:30 by paangulo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -46,30 +56,3 @@ int	ft_printf(char const *format, ...)
 	va_end (args);
 	return (len);
 }
-/*int main()
-{
-	ft_printf("%c%c%c", 'a', '\t', 'b');
-	
-	char			*str;
-	char			c;
-	int 	x;
-	void	 *ptr;
-
-	c = 'a';
-	str = "Comprobando ft_printf\n";
-	x = 123;
-	ptr = &x;
-	ft_printf("El caracter es %c\n", c);
-	printf("El caracter es %c\n", c);
-	ft_printf("String: %s\n", str);
-	printf("String: %s\n", str);
-	ft_printf("Puntero: %p\n", ptr);
-	printf("Puntero: %p\n", ptr);
-	ft_printf("Int max: %d, Int min: %i\n", 0, -521);
-	printf("Int max: %d, Int max: %i\n", 0, 521);
-	ft_printf("Unsigned int: %u\n", 4294967295);
-	printf("Unsigned int: %u\n", 429496729);
-	ft_printf("Hexadecimal en minuscula: %x\n", 255);
-	printf("Hexadecimal en minuscula:: %x\n", 255);
-	ft_printf("Hexadecimal en minuscula: %X\n", 255);
-}*/
